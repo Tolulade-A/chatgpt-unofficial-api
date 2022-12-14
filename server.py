@@ -13,8 +13,8 @@ from playwright.sync_api import sync_playwright
 APP = flask.Flask(__name__)
 PLAY = sync_playwright().start()
 BROWSER = PLAY.firefox.launch_persistent_context(
-    user_data_dir='C:XXX\\XXX\\AppData\\Local\\ms-playwright', #location of the playwright installation
-    #executable_path= ('C:\\XXX\XXX\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'), #if you want to change
+    user_data_dir='C:\\XXX\\XXX\\AppData\\Local\\ms-playwright', #location of the playwright installation
+    #executable_path= ('C:\\XXX\\XXX\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'), #if you want to change
     #firefox to chromium.
     headless=False,
 )
@@ -25,13 +25,13 @@ PAGE = BROWSER.new_page()
 from playwright.sync_api import sync_playwright
 
 APP = flask.Flask(__name__)
-user_data_dir = 'C:xxx\\xxx\\AppData\\Local\\ms-playwright'
+user_data_dir = 'C:\\xxx\\xxx\\AppData\\Local\\ms-playwright'
 #user_data_dir = os.path.join(os.getcwd(), user_data_dir)
 
 with sync_playwright() as PLAY:
     BROWSER = PLAY.chromium.launch_persistent_context(
         user_data_dir,
-        executable_path=('C:\\XXX\XXX\\AppData\\Local\\Google\\Chrome\\Application\\new_chrome.exe'),
+        executable_path=('C:\\XXX\\XXX\\AppData\\Local\\Google\\Chrome\\Application\\new_chrome.exe'),
         headless=False)
     PAGE = BROWSER.new_page()
     PAGE.goto("https://chat.openai.com/")
@@ -112,8 +112,8 @@ def restart():
     time.sleep(0.25)
     PLAY = sync_playwright().start()
     BROWSER = PLAY.firefox.launch_persistent_context(
-        user_data_dir='C:XXX\\XXX\\AppData\\Local\\ms-playwright',
-        #executable_path=('C:\\XXX\XXX\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'),
+        user_data_dir='C:\\XXX\\XXX\\AppData\\Local\\ms-playwright',
+        #executable_path=('C:\\XXX\\XXX\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe'),
         headless=False,
     )
     PAGE = BROWSER.new_page()
