@@ -25,7 +25,7 @@ PAGE = BROWSER.new_page()
 from playwright.sync_api import sync_playwright
 
 APP = flask.Flask(__name__)
-user_data_dir = 'C:Users\\Reispar_Tolulade\\AppData\\Local\\ms-playwright'
+user_data_dir = 'C:xxx\\xxx\\AppData\\Local\\ms-playwright'
 #user_data_dir = os.path.join(os.getcwd(), user_data_dir)
 
 with sync_playwright() as PLAY:
