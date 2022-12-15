@@ -1,7 +1,7 @@
 # ChatGPT Unofficial api
 
 * It uses playwright and firefox to open browser and parse html.
-* It is an unoffical api for development purpose only.
+* It is an unofficial api for development purpose only.
 
 ```
 Playwright comes with three web browsers to my knowledge;
