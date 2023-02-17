@@ -62,7 +62,7 @@ def get_last_message():
     """Get the latest message"""
     while is_loading_response():
         time.sleep(0.25)
-    page_elements = PAGE.query_selector_all("div[class*='request-:']")
+    page_elements = PAGE.query_selector_all("div[class*='markdown prose']")
     last_element = page_elements.pop()
     return last_element.inner_text()
 
